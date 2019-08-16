@@ -1,17 +1,19 @@
+<!-- Dispay data--------------- -->
+
+
 <div class="container-fluid">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Task Board -</a>
+          </button> -->
+          <a class="navbar-brand headbrand" href="#"><h2>Task Board</h2></a>
         </div>
-        <button class="btn" type="submit">YOURDRS WEB APP</button>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -38,7 +40,7 @@
 
 
 <div class="firstContainer">
-  <p>todo</p>
+  <h2>todo</h2>
 <div class="card 123 secondcard" *ngFor="let item of arr; let i=index"  style="width: 18rem;">
   <div class="head hedsec">
     <p class="card-text">{{item.description}}</p>
@@ -61,7 +63,7 @@
 
 
  <div class="SecondContainer">
-   <p>in progress</p>
+   <h2>in progress</h2>
     <div class="card 123 cardhead crdtop" style="width: 18rem;"  *ngFor="let item of inpro ; let i=index ">
         <div class="head ">
         <p class="card-text">{{item.description}}</p>
@@ -81,7 +83,7 @@
 
 
     <div class="ThirdContainer">
-      <p>development</p>
+      <h2>development</h2>
         <div class="card 123 trdsec" style="width: 18rem;"  *ngFor="let item of dev ; let i=index ">
             <div class="head">
             <p class="card-text">{{item.description}}</p>
@@ -101,7 +103,7 @@
 
 
         <div class="FourthContainer">
-          <p>Ready for QA</p>
+          <h2>Ready for QA</h2>
             <div class="card 123 frdsec" style="width: 18rem;"  *ngFor="let item of readyforQA ; let i=index ">
                 <div class="head">
                 <p class="card-text">{{item.description}}</p>
@@ -121,7 +123,7 @@
 
 
             <div class="FiveContainer">
-              <p>system testing</p>
+              <h2>system testing</h2>
                 <div class="card 123 fivsec" style="width: 18rem;" *ngFor="let item of readyforST ; let i=index ">
                     <div class="head">
                     <p class="card-text">{{item.description}}</p>
@@ -141,7 +143,7 @@
 
 
                 <div class="SixthContainer">
-                  <p>completed</p>
+                  <h2>completed</h2>
                     <div class="card 123 sixsec" style="width: 18rem;" *ngFor="let item of Stcomplete ; let i=index ">
                         <div class="head">
                         <p class="card-text">{{item.description}}</p>

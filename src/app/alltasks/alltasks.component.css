@@ -11,7 +11,7 @@ label.date1 {
 label.priority {
   font-weight: 700;
   font-size: larger;
-  padding: 5px 13px;
+  padding: 3px 18px;
   background-color: red;
   border-radius: 14px;
   color: white;
@@ -130,4 +130,11 @@ div#toDo {
 .secondcard{
   margin-top: 13px;
   margin-bottom: 13px;
+}
+.container-fluid {
+  background-color: #f8f9fa;
+  color: black;
+}
+a.navbar-brand.headbrand {
+  color: black;
 }

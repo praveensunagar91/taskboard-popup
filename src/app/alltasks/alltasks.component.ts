@@ -21,7 +21,7 @@ export class AlltasksComponent implements OnInit {
 
   arr:Task[] = [
     (new Task('1','Surgical','08/13/2019','Surgical request dashboard','High','Kiran','08/10/2019','work with the team','To-Do')),
-    (new Task('1','Surgical','08/13/2019','Surgical request dashboard','High','Kiran','08/10/2019','work with the team','To-Do'))
+    (new Task('1','Surgical','08/13/2019','Surgical request dashboard','low','Kiran','08/10/2019','work with the team','To-Do'))
 
   ];
 
