@@ -24,13 +24,22 @@
       </div><!-- /.container-fluid -->
     </nav>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<script>
+  var app = angular.module('myApp', []);
+  app.controller('myCtrl', function($scope) {
+      $scope.names = ["Emil", "Tobias", "Linus"];
+  });
+  </script>
+
 <div class="maincontainer">
 
 
 
 <div class="firstContainer">
   <p>todo</p>
-<div class="card 123" *ngFor="let item of arr; let i=index"  style="width: 18rem;">
+<div class="card 123 secondcard" *ngFor="let item of arr; let i=index"  style="width: 18rem;">
   <div class="head hedsec">
     <p class="card-text">{{item.description}}</p>
   </div>
@@ -51,37 +60,38 @@
 </div>
 
 
-<!-- <div class="SecondContainer">
-    <div class="card 123 cardhead crdtop" style="width: 18rem;">
+ <div class="SecondContainer">
+   <p>in progress</p>
+    <div class="card 123 cardhead crdtop" style="width: 18rem;"  *ngFor="let item of inpro ; let i=index ">
         <div class="head ">
-        <p class="card-text">sddddddddddddddddsadaffffffffasdfSSSSSSSSSSSSSSSDDFsdfSDFASDFASDFsdfsadsdasdfsdfsadfsdf.</p>
+        <p class="card-text">{{item.description}}</p>
       </div>
       <div class="card-body">
         <div class="datehead">
-        <label class="date1">24-11-2019</label>
+        <label class="date1">{{item.dueDate}}</label>
       </div>
       <div class="prio">
-        <label class="priority">HIGH </label>
+        <label class="priority">{{item.priority}}</label>
       </div>
 
         <button class="btn btn-primary edit12" > Edit</button>
       </div>
     </div>
-    </div> -->
+    </div>
 
 
     <div class="ThirdContainer">
-      <p>In Progress</p>
-        <div class="card 123 trdsec" style="width: 18rem;">
+      <p>development</p>
+        <div class="card 123 trdsec" style="width: 18rem;"  *ngFor="let item of dev ; let i=index ">
             <div class="head">
-            <p class="card-text">sddddddddddddddddsadaffffffffasdfSSSSSSSSSSSSSSSDDFsdfSDFASDFASDFsdfsadsdasdfsdfsadfsdf.</p>
+            <p class="card-text">{{item.description}}</p>
           </div>
           <div class="card-body">
             <div class="datehead">
-            <label class="date1">24-11-2019</label>
+            <label class="date1">{{item.dueDate}}</label>
           </div>
           <div class="prio">
-            <label class="priority">HIGH </label>
+            <label class="priority">{{item.priority}} </label>
           </div>
 
             <button class="btn btn-primary edit12" > Edit</button>
@@ -92,16 +102,16 @@
 
         <div class="FourthContainer">
           <p>Ready for QA</p>
-            <div class="card 123 frdsec" style="width: 18rem;">
+            <div class="card 123 frdsec" style="width: 18rem;"  *ngFor="let item of readyforQA ; let i=index ">
                 <div class="head">
-                <p class="card-text">sddddddddddddddddsadaffffffffasdfSSSSSSSSSSSSSSSDDFsdfSDFASDFASDFsdfsadsdasdfsdfsadfsdf.</p>
+                <p class="card-text">{{item.description}}</p>
               </div>
               <div class="card-body">
                 <div class="datehead">
-                <label class="date1">24-11-2019</label>
+                <label class="date1">{{item.dueDate}}</label>
               </div>
               <div class="prio">
-                <label class="priority">HIGH </label>
+                <label class="priority">{{item.priority}} </label>
               </div>
 
                 <button class="btn btn-primary edit12" > Edit</button>
@@ -111,16 +121,17 @@
 
 
             <div class="FiveContainer">
-                <div class="card 123 fivsec" style="width: 18rem;">
+              <p>system testing</p>
+                <div class="card 123 fivsec" style="width: 18rem;" *ngFor="let item of readyforST ; let i=index ">
                     <div class="head">
-                    <p class="card-text">sddddddddddddddddsadaffffffffasdfSSSSSSSSSSSSSSSDDFsdfSDFASDFASDFsdfsadsdasdfsdfsadfsdf.</p>
+                    <p class="card-text">{{item.description}}</p>
                   </div>
                   <div class="card-body">
                     <div class="datehead">
-                    <label class="date1">24-11-2019</label>
+                    <label class="date1">{{item.dueDate}}</label>
                   </div>
                   <div class="prio">
-                    <label class="priority">HIGH </label>
+                    <label class="priority">{{item.priority}} </label>
                   </div>
 
                     <button class="btn btn-primary edit12" > Edit</button>
@@ -130,16 +141,17 @@
 
 
                 <div class="SixthContainer">
-                    <div class="card 123 sixsec" style="width: 18rem;">
+                  <p>completed</p>
+                    <div class="card 123 sixsec" style="width: 18rem;" *ngFor="let item of Stcomplete ; let i=index ">
                         <div class="head">
-                        <p class="card-text">sddddddddddddddddsadaffffffffasdfSSSSSSSSSSSSSSSDDFsdfSDFASDFASDFsdfsadsdasdfsdfsadfsdf.</p>
+                        <p class="card-text">{{item.description}}</p>
                       </div>
                       <div class="card-body">
                         <div class="datehead">
-                        <label class="date1">24-11-2019</label>
+                        <label class="date1">{{item.dueDate}}</label>
                       </div>
                       <div class="prio">
-                        <label class="priority">HIGH </label>
+                        <label class="priority">{{item.priority}} </label>
                       </div>
 
                         <button class="btn btn-primary edit12" > Edit</button>
@@ -222,16 +234,14 @@
                     </div>
 
 
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Status
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item"  href="#">In Progress</a>
-                          <a class="dropdown-item" href="#">Development</a>
-                          <a class="dropdown-item" href="#">Ready for QA</a>
-                        </div>
-                      </div>
+                    <select id="selectid" class="form-control-mb-12" (change)="modo($event.target.value)">
+                      <option value="mod1">To Do</option>
+                      <option value="mod2">In Progress</option>
+                      <option value="mod3">Development</option>
+                      <option value="mod4">Ready for QA</option>
+                      <option value="mod5">Read for system testing</option>
+                      <option value="mod6">ST Completed</option>
+                   </select>
 
                   </form>
                 </div>

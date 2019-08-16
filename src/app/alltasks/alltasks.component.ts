@@ -25,6 +25,12 @@ export class AlltasksComponent implements OnInit {
 
   ];
 
+  inpro:Task[]=[];
+  dev:Task[]=[];
+  readyforQA:Task[]=[];
+  readyforST:Task[]=[];
+  Stcomplete:Task[]=[];
+
 
   constructor() { }
 
@@ -44,35 +50,31 @@ export class AlltasksComponent implements OnInit {
     this.updateditem = i;
   }
 
-  UpdateItem() {
 
-    let data = this.updateditem;
-    for (let i = 0; i < this.arr.length; i++) {
-      // tslint:disable-next-line: triple-equals
-      if ( i == data ) {
-        this.arr[i].taskId = this.taskId ;
 
-        this.arr[i].title = this.title ;
-        this.arr[i].dueDate = this.dueDate;
-        this.arr[i].description = this.description;
-        this.arr[i].priority = this.priority;
-        this.arr[i].assignedTo = this.assignedTo;
-        this.arr[i].assignedDate = this.assignedDate;
-        this.arr[i].comments = this.comments;
-        this.arr[i].status = this.status;
+  modo(value: string){
+    switch(value) {
+      case "mod2":
+        this.inpro.push(new Task(this.taskId,this.title,this.dueDate,this.description,this.priority,this.assignedTo,this.assignedDate,this.comments,this.status));
+        // this.arr.splice(this.arr.indexOf(),1);
 
-        this.taskId = '';
-        this.title = '';
-        this.dueDate = '';
-        this.description = '';
-        this.priority = '';
-        this.assignedTo = '';
-        this.assignedDate = '';
-        this.comments = '';
-        this.status = '';
-      }
+        break;
+      case "mod3":
+        this.dev.push(new Task(this.taskId,this.title,this.dueDate,this.description,this.priority,this.assignedTo,this.assignedDate,this.comments,this.status));
+      break;
+      case "mod4":
+        this.readyforQA.push(new Task(this.taskId,this.title,this.dueDate,this.description,this.priority,this.assignedTo,this.assignedDate,this.comments,this.status));
+         break;
+
+         case "mod5":
+        this.readyforST.push(new Task(this.taskId,this.title,this.dueDate,this.description,this.priority,this.assignedTo,this.assignedDate,this.comments,this.status));
+         break;
+
+         case "mod6":
+        this.Stcomplete.push(new Task(this.taskId,this.title,this.dueDate,this.description,this.priority,this.assignedTo,this.assignedDate,this.comments,this.status));
+         break;
     }
-
   }
+
 
 }
