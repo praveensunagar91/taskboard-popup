@@ -35,7 +35,9 @@ button.btn.btn-primary.edit12 {
   border: 5px solid white;
     border-radius: 7px;
     margin-top: 13px;
+    margin-left: 28px;
 }
+
 .cardhead{
   margin-right: 20px;
   height: auto;
@@ -122,7 +124,7 @@ div#toDo {
   margin-top: 13px;
 }
 .maincontainer {
-  background-color: #e9ecef;
+  background-color:#dee2e6;
   height: 919px;
 }
 .secondcard{
