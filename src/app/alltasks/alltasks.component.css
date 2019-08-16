@@ -39,11 +39,13 @@ button.btn.btn-primary.edit12 {
 }
 
 .cardhead{
-  margin-right: 20px;
+
   height: auto;
-
-
+  margin-bottom: 13px;
 }
+
+
+
 
 .SecondContainer{
   float: left;
@@ -111,17 +113,19 @@ div#toDo {
 }
 .trdsec{
   margin-top: 13px;
-  margin-bottom: 27px;
+  margin-bottom: 13px;
 }
 .frdsec{
   margin-top: 13px;
-  margin-bottom: 27px;
+  margin-bottom: 13px;
 }
 .fivsec{
   margin-top: 13px;
+  margin-bottom: 13px;
 }
 .sixsec{
   margin-top: 13px;
+  margin-bottom: 13px;
 }
 .maincontainer {
   background-color:#dee2e6;
